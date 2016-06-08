@@ -15,15 +15,28 @@ def repeat(word, repeat_number = 2)
 end
 
 def start_of_word(word, number_of_letters)
-	#binding.pry
 	split_word = word.split(//)
 	split_word = split_word[0...number_of_letters]
 	split_word * ""
 end
 
-
+####I need two arrays
 def titleize(title)
-	title.capitalize
+	title_split = title.split(" ")
+	title_split.map do |word|
+		if word == "over"
+			#word = word
+			return word
+		elsif word == "and"
+			#word = word
+			return word
+		elsif word == "the"   &&   title_split[0] != word
+			#word = word
+			return word
+		else
+			return word.capitalize
+		end
+	end
 end
 
 
