@@ -20,3 +20,15 @@ def start_of_word(word, number_of_letters)
 	split_word = split_word[0...number_of_letters]
 	split_word * ""
 end
+
+
+def titleize(title)
+	title.capitalize
+end
+
+
+def first_word(words)
+	split_word = words.split
+	split_word[0]
+
+end
